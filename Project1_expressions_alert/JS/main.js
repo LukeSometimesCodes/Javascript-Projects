@@ -15,3 +15,4 @@ var family = "The Morreales", Dad ="Steve", Mom="Berlinda", Son="Luke";
 document.write(Son);
 
 document.write(3+3); //Everything above here is just testing out what JavaScript can do
+
