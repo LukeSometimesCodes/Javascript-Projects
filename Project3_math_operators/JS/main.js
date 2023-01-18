@@ -46,3 +46,4 @@ window.alert(Math.random() * 100); //Picks a number between 1-100
 let y = 3.14
 y = Math.ceil(y); //Math would be the constant, whatever afterwards would decide what to do with the number; ceil is rounding up, floor is rounding down
 console.log(y);
+
