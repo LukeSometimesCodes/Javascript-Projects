@@ -58,3 +58,5 @@ function not_function2() {
     document.getElementById("Not2").innerHTML = !(5 > 10); //Checks whether or not something is true.
 }
 
+document.write(Bigger = (5>1)? "Left number is bigger": "Right number is bigger");
+
