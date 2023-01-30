@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Final</title>
+    <script src="javafinal.js"></script>
+</head>
+<body>
+    <!--Fade in thing-->
+    <h1 style="font-size: 8vw;">Challenges for Java final</h1>
+    <a href="#bottom">Click here to go to bottom of page</p>
+        <hr>HORIZONTAL RULE
+
+<!--Phone number thing-->
+    <h2>Phone Number Validation</h2>
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Phone Number: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <br>
+    <br>
+
+    <!--POP UP FORM-->
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+        <h1>Login</h1>
+
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    </div>
+    <!--KEYFRAME THING-->
+
+    <div class="keyframething">
+        <p class="keyframetext">Keyframe Example</p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <!--ZOOM IN PIC EFFECT-->
+    <div class="movepic">
+        <img src="BrendanFraser.jpg" width="100px" height="100px">
+    </div>
+
+    <!--slideshow thing-->
+
+    <div id="slideshow">
+        <div>
+            <img src="o.png" width="100px" height="100px">
+        </div>
+        <div>
+            <img src="o.png" width="100px" height="100px">
+        </div>
+    </div>
+
+    <!--STICKY NOTE THING-->
+    <div class="sticky">This is to test the sticky note property.<br>
+    <button onclick="openForm()">Click <here></here></button>
+    </div>
+
+
+
+
+
+
+
+    </div class='#bottom'>Bottom of page where the thing should take you</div>
+
+
+
+<!--CSS FOR EVERYTHING---------------------------------------------------
+
+
+-------------------------------------------------------------------------------->
+   <style>
+    body {
+        opacity: 1;
+        transition: 1s opacity;
+    }
+
+    body.fade-out {
+        opacity: 0;
+        transition: none;
+    }
+    html {
+        background-color: aqua;
+    }
+
+    /*popup form*/
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: aqua;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+/*KEYFRAME THING*/
+.keyframething {
+    width: 100px;
+    height: 100px;
+    background-color: darkblue;
+    position: relative;
+    animation: mymove 10s infinite;
+}
+@keyframes mymove {
+    from{top: 0px;}
+    to {top: 75px}
+}
+.keyframetext {
+    color: white;
+}
+
+/*Pic zoom in thing*/
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+.movepic {
+	animation: zoominoutsinglefeatured 5s forwards;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*SLIDESHOW*/
+#slideshow { 
+  margin: 50px auto; 
+  position: relative; 
+  width: 240px; 
+  height: 240px; 
+  padding: 10px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px; 
+}
+
+/*sticky note thing*/
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 50px;
+  font-size: 20px;
+}
+
+
+
+
+   </style>>
+</body>
+</html>
