@@ -10,4 +10,4 @@ Here is a mockup of a movie theatre webpage using Bootstrap: https://github.com/
 
 And my personal favorite, my portfolio website: https://lukesometimescodes.github.io./
 
-Thank you for stoppong by!
+Thank you for stopping by!
