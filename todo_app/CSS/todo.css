@@ -34,3 +34,7 @@ li {
     right: 0;
     width: 100%;
 }
+
+.remove {
+    padding-bottom: 5px;
+}

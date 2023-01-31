@@ -24,10 +24,14 @@ function get_todos() {
 }
 /*this function adds the inputted task to the get_todos function array*/
 function add() {
+    /*this takes the inputted task and creates a variable of it*/
+    var task = document.getElementById('task').value;
+
+    var todos = get_todos();
 /*this adds a new task to the end of the array*/
 todos.push(task);
 /*this converts the task input to a JSON string*/
-localStorage.setItem('todo', JSONstringify(todos));
+localStorage.setItem('todo', JSON.stringify(todos));
 document.getElementById('task').value = "";
 show();
 
@@ -44,12 +48,38 @@ function show() {
     /*this displays a task to the list in the order that is is inputted*/
     for (var i = 0; i < todos.length; i++) {
         /*this also displays the task as a list and creates the button with the x*/
-        html += '<li>' + todos[i] + '<button class="remove" id="' + '">x</buttom=n></li>';
+        html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
 
     };
     html += '</ul>';
-    /*this displays the inputted task when the add item button is clicked*/
-    document.getElementById('add').addEventListener('click', add);
-    /*this will keep the inputs displayed permanetely on the screen*/
+    /*this displays the task as a list*/
+    document.getElementById('todos').innerHTML = html;
+    //This tells the browser how to display the todo array after an item has been removed
+    var buttons = document.getElementsByClassName('remove');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };
+}
+/*this displays the inputed task when the add item button is clickde*/
+document.getElementById('add').addEventListener('click', add);
+/*this will keep the inputs displayed permenaetely on the screen*/
+show();
+
+//remove task function
+
+/*this creates the functionality of removing a todo item from the array*/
+function remove() {
+    var id =  this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+    //This looks in the show() how to display a removed item
     show();
+
+    return false;
+}
+
+//ondblick function
+function myFunction() {
+    document.getElementById('thing').style.color= 'aqua';
 }
